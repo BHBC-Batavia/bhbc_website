@@ -63,7 +63,7 @@
 }
 .visit-details-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 .visit-detail-card {
@@ -71,6 +71,8 @@
   background: var(--off-white);
   border-top: 4px solid var(--navy);
   border-radius: 0 0 4px 4px;
+  display: flex;
+  flex-direction: column;
 }
 .visit-detail-card-icon {
   color: var(--navy);
@@ -291,9 +293,6 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 1100px) {
-  .visit-details-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 900px) {
   .visit-expect-steps { gap: 40px; }
 }
