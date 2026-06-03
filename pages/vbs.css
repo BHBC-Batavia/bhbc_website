@@ -31,38 +31,12 @@
 
 /* HERO */
 .vbs-hero {
-  position: relative;
   line-height: 0;
 }
 .vbs-hero-img {
   width: 100%;
   height: auto;
   display: block;
-}
-.vbs-hero-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 60px 40px;
-  background: linear-gradient(to top, rgba(13,24,41,0.85) 0%, transparent 100%);
-  display: flex;
-  justify-content: center;
-}
-.vbs-register-btn {
-  background: var(--vbs-gold);
-  color: var(--white);
-  border: none;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 18px 48px;
-  border-radius: 2px;
-  transition: background 0.2s, transform 0.2s;
-}
-.vbs-register-btn:hover {
-  background: #c07d1a;
-  transform: translateY(-2px);
 }
 
 /* INFO STRIP */
