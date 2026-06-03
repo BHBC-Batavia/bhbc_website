@@ -161,6 +161,13 @@
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 .pos-cta-inner { text-align: center; }
+.pos-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 .pos-cta-heading {
   font-family: var(--font-head);
   font-size: clamp(24px, 3.5vw, 40px);

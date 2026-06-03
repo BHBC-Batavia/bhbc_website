@@ -63,7 +63,7 @@
 }
 .visit-details-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
 .visit-detail-card {
@@ -84,6 +84,22 @@
   text-transform: uppercase;
   color: var(--navy);
   margin-bottom: 20px;
+}
+.visit-contact-block {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.visit-contact-block .visit-address-phone {
+  margin-top: 0;
+}
+.visit-feedback-email {
+  display: block;
+  margin-top: 16px;
+  word-break: break-all;
 }
 
 /* Service times inside card */
@@ -255,27 +271,33 @@
 
 /* CLOSING CTA */
 .visit-closing {
-  background: var(--navy);
+  background: var(--white);
   padding: 100px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid #eee;
   text-align: center;
 }
 .visit-closing-heading {
   font-family: var(--font-head);
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
-  color: var(--white);
+  color: var(--navy);
   margin-bottom: 16px;
 }
 .visit-closing-text {
   font-family: var(--font-body);
   font-size: 18px;
-  color: rgba(255,255,255,0.6);
+  color: var(--text-mid);
   margin-bottom: 40px;
 }
 
 /* RESPONSIVE */
+@media (max-width: 1100px) {
+  .visit-details-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
+  .visit-expect-steps { gap: 40px; }
+}
+@media (max-width: 600px) {
   .visit-details-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
