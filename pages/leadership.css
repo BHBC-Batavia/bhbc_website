@@ -267,11 +267,17 @@
   font-size: 15px;
   color: var(--navy);
   text-decoration: none;
-  border-bottom: 1px solid var(--navy);
   transition: opacity 0.2s;
 }
 .ld-email-link:hover {
   opacity: 0.65;
+}
+.ld-pastor-content .ld-email-link {
+  color: rgba(255,255,255,0.75);
+}
+.ld-pastor-content .ld-email-link:hover {
+  color: #fff;
+  opacity: 1;
 }
 
 /* RESPONSIVE */
