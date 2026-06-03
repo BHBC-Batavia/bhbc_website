@@ -55,6 +55,58 @@
 }
 .min-intro-inner { max-width: 680px; }
 
+/* NURSERY SECTION */
+.min-nursery-section {
+  background: var(--off-white);
+  padding: 80px 0 100px;
+  border-top: 1px solid #e8e4e0;
+}
+.min-nursery-rooms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.min-nursery-room {
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+  border-radius: 0 4px 4px 0;
+  padding: 40px 44px;
+  transition: border-left-color 0.2s;
+}
+.min-nursery-room:hover {
+  border-left-color: var(--dust);
+}
+.min-nursery-room-age {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 10px;
+}
+.min-nursery-room-name {
+  font-family: var(--font-head);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
+.min-nursery-room-desc {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text-mid);
+}
+.min-nursery-note {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--smoke);
+}
+
 /* SUNDAY SCHOOL SECTION */
 .min-section {
   background: var(--white);
@@ -208,6 +260,7 @@
   .min-outreach { grid-template-columns: 1fr; gap: 48px; }
   .min-class { grid-template-columns: 80px 1fr; }
   .min-class-photo { display: none; }
+  .min-nursery-rooms { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   .min-container { padding: 0 24px; }
