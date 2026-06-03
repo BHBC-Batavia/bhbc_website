@@ -73,6 +73,7 @@
   border-radius: 0 0 4px 4px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .visit-detail-card-icon {
   color: var(--navy);
@@ -165,7 +166,9 @@
 .visit-email-link:hover { opacity: 0.6; }
 .visit-faq-a .visit-email-link {
   font-size: inherit;
-  color: var(--navy);
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Who we are card */
@@ -244,7 +247,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  max-width: 860px;
+  max-width: 960px;
 }
 .visit-faq-item {
   padding: 36px 40px;
