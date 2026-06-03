@@ -372,7 +372,6 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 28px;
   animation: fadeIn 0.9s var(--ease) 0.35s both;
   text-shadow: 0 2px 32px rgba(0,0,0,0.4);
-  white-space: nowrap;
 }
 .hero-sub {
   font-family: var(--font-body);
@@ -895,7 +894,7 @@ a { text-decoration: none; color: inherit; }
   .salvation-banner { padding: 64px 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .time-item { flex: 1 1 100%; }
-  .hero-heading { font-size: clamp(42px, 12vw, 72px); }
+  .hero-heading { font-size: clamp(32px, 10vw, 64px); }
   .hero-sub { white-space: normal !important; font-size: 15px; }
 }
 
