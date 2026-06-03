@@ -167,8 +167,6 @@
 .visit-faq-a .visit-email-link {
   font-size: inherit;
   color: rgba(255,255,255,0.85);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 /* Who we are card */
