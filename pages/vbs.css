@@ -221,7 +221,7 @@
 }
 .vbs-details-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 .vbs-detail-card {
@@ -230,11 +230,17 @@
   border-top: 4px solid var(--navy);
   border-radius: 0 0 4px 4px;
   transition: transform 0.2s;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
 }
 .vbs-detail-card:hover { transform: translateY(-3px); }
 .vbs-detail-icon {
   color: var(--navy);
-  margin-bottom: 20px;
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 2px;
 }
 .vbs-detail-heading {
   font-family: var(--font-head);
@@ -243,14 +249,19 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--navy);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
 }
 .vbs-detail-text {
   font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.75;
   color: var(--text-mid);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  grid-column: 2;
+  grid-row: 2;
 }
 .vbs-detail-link {
   font-family: var(--font-head);
@@ -262,6 +273,9 @@
   border-bottom: 2px solid var(--navy);
   padding-bottom: 2px;
   transition: opacity 0.2s;
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
 }
 .vbs-detail-link:hover { opacity: 0.6; }
 
@@ -315,12 +329,22 @@
 @media (max-width: 900px) {
   .vbs-about-grid { grid-template-columns: 1fr; gap: 48px; }
   .vbs-schedule-grid { grid-template-columns: 1fr 1fr; }
-  .vbs-details-grid { grid-template-columns: 1fr 1fr; }
+  .vbs-details-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .vbs-container { padding: 0 24px; }
   .vbs-schedule-grid { grid-template-columns: 1fr; }
-  .vbs-strip-inner { flex-wrap: wrap; }
+  .vbs-strip-inner { flex-wrap: wrap; padding: 0 24px; }
   .vbs-strip-item { flex: 1 1 50%; }
   .vbs-strip-divider { display: none; }
+}
+
+/* Prevent horizontal scroll bleed */
+.vbs-hero,
+.vbs-strip,
+.vbs-about,
+.vbs-schedule-section,
+.vbs-details-section,
+.vbs-register-section {
+  overflow-x: hidden;
 }
