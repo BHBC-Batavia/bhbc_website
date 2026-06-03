@@ -337,6 +337,13 @@
   .vbs-strip-inner { flex-wrap: wrap; padding: 0 24px; }
   .vbs-strip-item { flex: 1 1 50%; }
   .vbs-strip-divider { display: none; }
+  .vbs-register-btn-lg {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 24px;
+    box-sizing: border-box;
+  }
 }
 
 /* Prevent horizontal scroll bleed */
