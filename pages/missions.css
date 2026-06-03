@@ -1,0 +1,219 @@
+/* =============================================
+   MISSIONS — missions.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active-sub {
+  color: var(--white) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.missions-hero {
+  background-image: url('../assets/images/open_bible_top_down.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+.missions-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(13,31,45,0.85);
+  z-index: 0;
+}
+.missions-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* SHARED CONTAINER */
+.ms-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* SCRIPTURE */
+.ms-scripture {
+  background: var(--navy-deep);
+  padding: 72px 0;
+  text-align: center;
+}
+.ms-scripture-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.ms-scripture-text {
+  font-family: var(--font-body);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.ms-scripture-ref {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+/* ABOUT */
+.ms-about {
+  background: var(--white);
+  padding: 100px 0;
+}
+.ms-about-inner { max-width: 760px; }
+
+/* MISSIONS MONTH */
+.ms-month-section {
+  background: var(--navy-deep);
+  padding: 100px 0;
+}
+.ms-month-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 80px;
+  align-items: start;
+}
+.ms-month-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ms-stat-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid var(--silver);
+  padding: 28px 28px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ms-stat-number {
+  font-family: var(--font-head);
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+.ms-stat-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+/* FAITH PROMISE */
+.ms-faith-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+.ms-faith-inner { max-width: 760px; }
+
+/* LOCAL */
+.ms-local-section {
+  background: var(--navy);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.ms-local-inner { max-width: 760px; }
+
+/* SENDING */
+.ms-sending-section {
+  background: var(--white);
+  padding: 100px 0;
+  border-top: 1px solid #eee;
+}
+.ms-sending-inner { max-width: 760px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ms-month-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 680px) {
+  .ms-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+}
+
+/* MISSIONARIES SECTION */
+.ms-missionaries-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+.ms-missionaries-inner { max-width: 900px; }
+.ms-missionary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.ms-missionary-card {
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+  padding: 20px 24px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.15s;
+}
+.ms-missionary-card:hover { transform: translateX(3px); }
+.ms-missionary-name {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.ms-missionary-field {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--smoke);
+}
+@media (max-width: 720px) {
+  .ms-missionary-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .ms-missionary-grid { grid-template-columns: 1fr; }
+}

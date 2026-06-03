@@ -1,0 +1,181 @@
+/* =============================================
+   OUR STORY — our-story.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active-sub {
+  color: var(--white) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* STORY SECTION */
+.story-section {
+  background: var(--white);
+  padding: 100px 0 120px;
+}
+.story-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* CHAPTER LAYOUT */
+.story-chapter {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+.story-chapter:last-child { margin-bottom: 0; }
+
+/* Timeline marker */
+.story-chapter-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.story-year {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  background: var(--off-white);
+  border: 2px solid var(--navy);
+  border-radius: 2px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  text-align: center;
+}
+.story-line {
+  width: 2px;
+  flex: 1;
+  min-height: 60px;
+  background: linear-gradient(to bottom, var(--navy), rgba(27,66,101,0.1));
+  margin-top: 8px;
+}
+.story-line-last {
+  background: linear-gradient(to bottom, var(--navy), transparent);
+}
+
+/* Chapter content */
+.story-eyebrow {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 12px;
+}
+.story-heading {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.story-text {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  max-width: 660px;
+}
+.story-text:last-of-type { margin-bottom: 0; }
+
+/* Scripture verse */
+.story-verse {
+  margin: 28px 0;
+  padding: 24px 28px;
+  border-left: 4px solid var(--navy);
+  background: var(--off-white);
+  border-radius: 0 4px 4px 0;
+  max-width: 600px;
+}
+.story-verse p {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.story-verse cite {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  font-style: normal;
+}
+
+/* Story photo */
+.story-photo-wrap {
+  margin-bottom: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  max-width: 660px;
+}
+.story-photo {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* CTA actions */
+.story-cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .story-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .story-chapter { grid-template-columns: 1fr; gap: 20px; }
+  .story-chapter-marker { flex-direction: row; align-items: center; gap: 12px; }
+  .story-line { display: none; }
+}

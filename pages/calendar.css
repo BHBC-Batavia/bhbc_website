@@ -1,0 +1,178 @@
+/* =============================================
+   CALENDAR PAGE — calendar.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+
+.nav-active {
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--silver);
+  padding-bottom: 2px;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* CALENDAR EMBED */
+.cal-embed-section {
+  background: var(--white);
+  padding: 72px 0;
+  min-height: 200px;
+}
+.cal-embed-wrap {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  min-height: 100px;
+}
+
+/* ICAL SECTION */
+.ical-section {
+  background: var(--navy);
+  padding: 100px 0;
+}
+.ical-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.ical-header .body-text {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.ical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 56px;
+}
+.ical-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 40px;
+  transition: background 0.2s;
+}
+.ical-card:hover {
+  background: rgba(255,255,255,0.09);
+}
+.ical-card-icon {
+  color: var(--silver);
+  margin-bottom: 20px;
+}
+.ical-card-heading {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.ical-steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ical-steps li {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+}
+.ical-steps li strong {
+  color: var(--white);
+  font-weight: 600;
+}
+.ical-links-wrap {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 40px;
+}
+.ical-links-heading {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 24px;
+}
+.ical-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.ical-link-title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.ical-link-desc {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: rgba(255,255,255,0.55);
+}
+.btn-ical {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.btn-ical:hover {
+  background: var(--off-white);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .ical-grid { grid-template-columns: 1fr; }
+  .ical-link-row { flex-direction: column; align-items: flex-start; }
+  .page-hero { padding: 140px 24px 64px; }
+}

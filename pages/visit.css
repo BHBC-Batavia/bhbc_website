@@ -1,0 +1,274 @@
+/* =============================================
+   VISIT US — visit.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active {
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--silver);
+  padding-bottom: 2px;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* SHARED CONTAINER */
+.visit-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* INTRO */
+.visit-intro {
+  background: var(--white);
+  padding: 100px 0 64px;
+}
+.visit-intro-inner { max-width: 680px; }
+
+/* DETAIL CARDS */
+.visit-details-section {
+  background: var(--white);
+  padding: 0 0 100px;
+}
+.visit-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.visit-detail-card {
+  padding: 40px;
+  background: var(--off-white);
+  border-top: 4px solid var(--navy);
+  border-radius: 0 0 4px 4px;
+}
+.visit-detail-card-icon {
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.visit-detail-card-heading {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+/* Service times inside card */
+.visit-times { display: flex; flex-direction: column; gap: 16px; }
+.visit-time-row { display: flex; flex-direction: column; gap: 8px; }
+.visit-time-day {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--smoke);
+}
+.visit-time-services { display: flex; flex-direction: column; gap: 6px; }
+.visit-time-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.visit-time-name {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--text-mid);
+}
+.visit-time-clock {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.visit-time-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 4px 0;
+}
+
+/* Address card */
+.visit-address-line {
+  font-family: var(--font-body);
+  font-size: 19px;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+.visit-address-phone {
+  color: var(--smoke);
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+.visit-directions-btn { margin-top: 8px; }
+
+/* Who we are card */
+.visit-card-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+}
+
+/* MAP */
+.visit-map-section {
+  line-height: 0;
+  box-shadow: 0 -4px 32px rgba(0,0,0,0.06);
+}
+.visit-map-embed iframe { display: block; width: 100%; }
+
+/* WHAT TO EXPECT */
+.visit-expect-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+.visit-expect-header {
+  max-width: 680px;
+  margin-bottom: 64px;
+}
+.visit-expect-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.visit-expect-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 40px 0;
+  border-bottom: 1px solid #e0dbd5;
+  align-items: start;
+}
+.visit-expect-step:first-child { border-top: 1px solid #e0dbd5; }
+.visit-expect-num {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--silver);
+  letter-spacing: 0.1em;
+  padding-top: 4px;
+}
+.visit-expect-heading {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.visit-expect-text {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 680px;
+}
+
+/* FAQ */
+.visit-faq-section {
+  background: var(--navy);
+  padding: 100px 0;
+}
+.visit-faq-header {
+  margin-bottom: 56px;
+}
+.visit-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 860px;
+}
+.visit-faq-item {
+  padding: 36px 40px;
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid rgba(255,255,255,0.15);
+  transition: background 0.2s, border-left-color 0.2s;
+}
+.visit-faq-item:hover {
+  background: rgba(255,255,255,0.08);
+  border-left-color: var(--silver);
+}
+.visit-faq-q {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.visit-faq-a {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.72);
+}
+
+/* CLOSING CTA */
+.visit-closing {
+  background: var(--navy);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+.visit-closing-heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.visit-closing-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .visit-details-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .visit-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .visit-expect-step { grid-template-columns: 1fr; gap: 8px; }
+  .visit-expect-num { display: none; }
+  .visit-faq-item { padding: 28px 24px; }
+  .visit-closing-text { font-size: 15px; }
+}

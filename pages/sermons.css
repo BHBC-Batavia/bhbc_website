@@ -1,0 +1,270 @@
+/* =============================================
+   SERMONS — sermons.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active {
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--silver);
+  padding-bottom: 2px;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sermons-hero {
+  background-image: url('../assets/images/pulpit_area.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-color: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+.sermons-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(13,31,45,0.82);
+  z-index: 0;
+}
+.sermons-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* SHARED */
+.sr-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* LATEST SERMON */
+.sr-latest {
+  background: var(--white);
+  padding: 100px 0;
+}
+.sr-latest-header { margin-bottom: 48px; }
+.sr-latest-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 64px;
+  align-items: start;
+}
+.sr-embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+}
+.sr-embed-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.sr-latest-label {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+.sr-latest-church {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 20px;
+}
+.sr-latest-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 32px;
+}
+.sr-yt-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* BROWSE SECTION */
+.sr-browse {
+  background: var(--off-white);
+  padding: 80px 0 100px;
+  border-top: 1px solid #e8e4e0;
+}
+
+/* TABS */
+.sr-browse-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 48px;
+  border-bottom: 2px solid #ddd;
+}
+.sr-tab {
+  background: none;
+  border: none;
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  padding: 12px 24px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.sr-tab:hover { color: var(--navy); }
+.sr-tab.active {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+/* TAB PANELS */
+.sr-tab-panel { display: none; }
+.sr-tab-panel.active { display: block; }
+
+/* PLAYLIST EMBED */
+.sr-playlist-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-bottom: 32px;
+}
+.sr-playlist-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.sr-yt-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.sr-yt-text {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--text-mid);
+  flex: 1;
+}
+
+/* SERIES NOTE */
+.sr-series-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 48px;
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+  border-radius: 0 4px 4px 0;
+  max-width: 680px;
+}
+.sr-series-note-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--text-mid);
+}
+.sr-series-note-inner svg { flex-shrink: 0; color: var(--navy); margin-top: 2px; }
+.sr-series-note-inner p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* LIVE STREAM CTA */
+.sr-live {
+  background: var(--navy);
+  padding: 100px 0;
+}
+.sr-live-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.sr-live-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e53e3e;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 6px rgba(229,62,62,0.25);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(229,62,62,0.25); }
+  50% { box-shadow: 0 0 0 12px rgba(229,62,62,0.1); }
+}
+.sr-live-heading {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.sr-live-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.72);
+  max-width: 580px;
+  margin-bottom: 28px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sr-latest-grid { grid-template-columns: 1fr; }
+  .sr-live-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+}
+@media (max-width: 640px) {
+  .sr-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .sr-yt-link { flex-direction: column; align-items: flex-start; }
+}

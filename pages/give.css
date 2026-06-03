@@ -1,0 +1,163 @@
+/* =============================================
+   GIVE PAGE — give.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active {
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--silver);
+  padding-bottom: 2px;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* SHARED CONTAINER */
+.give-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* INTRO */
+.give-intro {
+  background: var(--white);
+  padding: 100px 0;
+}
+.give-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.give-verse {
+  margin-top: 32px;
+  padding: 24px 28px;
+  border-left: 4px solid var(--navy);
+  background: var(--off-white);
+  border-radius: 0 4px 4px 0;
+}
+.give-verse p {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.give-verse cite {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  font-style: normal;
+}
+.give-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.give-detail-card {
+  padding: 28px 32px;
+  border: 1px solid #e8e4e0;
+  border-left: 4px solid var(--navy);
+  background: var(--off-white);
+  border-radius: 0 4px 4px 0;
+  transition: border-left-color 0.2s, transform 0.2s;
+}
+.give-detail-card:hover {
+  border-left-color: var(--dust);
+  transform: translateX(4px);
+}
+.give-detail-heading {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.give-detail-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+.give-detail-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* GIVE NOW CTA */
+.give-cta-section {
+  background: var(--navy);
+  padding: 100px 0;
+}
+.give-cta-inner {
+  text-align: center;
+}
+.give-cta-inner .section-eyebrow { color: rgba(255,255,255,0.6); }
+.give-cta-inner .section-heading { color: var(--white); }
+.give-cta-text {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+.btn-give {
+  font-size: 15px;
+  padding: 18px 56px;
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+}
+.btn-give:hover {
+  background: var(--off-white);
+  border-color: var(--off-white);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .give-intro-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 680px) {
+  .give-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .give-intro { padding: 72px 0; }
+  .give-embed-section { padding: 72px 0; }
+}

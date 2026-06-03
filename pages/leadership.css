@@ -1,0 +1,273 @@
+/* =============================================
+   LEADERSHIP — leadership.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.nav-active-sub {
+  color: var(--white) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* SHARED */
+.ld-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.ld-section {
+  background: var(--white);
+  padding: 100px 0;
+}
+.ld-section-alt {
+  background: var(--off-white);
+}
+.ld-section-header {
+  margin-bottom: 56px;
+  max-width: 680px;
+}
+.ld-mb { margin-bottom: 48px; }
+.ld-section-sub {
+  margin-bottom: 24px;
+}
+.ld-sub-label {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  border-left: 3px solid var(--navy);
+  padding-left: 12px;
+}
+
+/* GRIDS */
+.ld-grid {
+  display: grid;
+  gap: 24px;
+}
+.ld-grid-1 { grid-template-columns: 1fr; max-width: 560px; }
+.ld-grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+/* PASTOR FEATURED CARD */
+.ld-pastor-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  align-items: start;
+  background: var(--navy-deep);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.ld-pastor-photo {
+  height: 100%;
+  min-height: 420px;
+}
+.ld-pastor-content {
+  padding: 48px 48px 48px 0;
+}
+.ld-pastor-name {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+.ld-pastor-bio {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 16px;
+}
+.ld-pastor-spouse {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* STANDARD CARDS */
+.ld-card {
+  background: var(--white);
+  border-top: 4px solid var(--navy);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ld-section-alt .ld-card { background: var(--white); }
+.ld-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.ld-card-photo {
+  width: 100%;
+  height: 220px;
+}
+.ld-card-content {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PHOTO PLACEHOLDERS */
+.ld-placeholder {
+  background: #e8e4e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #aaa;
+}
+.ld-placeholder-icon { opacity: 0.5; }
+.ld-placeholder-label {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+/* CARD CONTENT */
+.ld-card-role {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 4px;
+}
+.ld-pastor-card .ld-card-role {
+  color: var(--silver);
+}
+.ld-card-class-tag {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--navy);
+  background: rgba(27,66,101,0.08);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+.ld-card-name {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.ld-card-bio {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  flex: 1;
+  margin-bottom: 16px;
+}
+.ld-card-spouse,
+.ld-pastor-spouse {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+.ld-spouse-label {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--smoke);
+}
+.ld-spouse-name {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-dark);
+}
+.ld-pastor-card .ld-spouse-label { color: var(--silver); }
+.ld-pastor-card .ld-spouse-name { color: var(--white); }
+
+/* CTA */
+.ld-cta {
+  background: var(--navy);
+  padding: 100px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.ld-cta-heading {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.ld-cta-text {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .ld-grid-3 { grid-template-columns: 1fr; }
+  .ld-pastor-card { grid-template-columns: 1fr; }
+  .ld-pastor-photo { min-height: 280px; }
+  .ld-pastor-content { padding: 40px; }
+}
+@media (max-width: 640px) {
+  .ld-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .ld-grid-3 { grid-template-columns: 1fr; }
+  .ld-grid-1 { max-width: 100%; }
+}
