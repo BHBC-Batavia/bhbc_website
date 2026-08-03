@@ -70,6 +70,17 @@
   margin-bottom: 20px;
   text-align: left;
 }
+.pos-intro-verse {
+  margin: 32px 0;
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+}
+.pos-intro-verse.pos-verse p {
+  color: var(--navy);
+}
+.pos-intro-verse.pos-verse cite {
+  color: var(--smoke);
+}
 .pos-intro-pull {
   font-family: var(--font-body);
   font-size: 24px;
@@ -85,7 +96,7 @@
 
 /* STEPS SECTION */
 .pos-steps-section {
-  background: var(--navy);
+  background: var(--navy-deep);
   padding: 100px 0;
 }
 .pos-steps-header {
@@ -161,13 +172,6 @@
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 .pos-cta-inner { text-align: center; }
-.pos-cta-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 .pos-cta-heading {
   font-family: var(--font-head);
   font-size: clamp(24px, 3.5vw, 40px);
