@@ -140,7 +140,7 @@
 }
 .ld-card-photo {
   width: 100%;
-  height: 220px;
+  height: 300px;
 }
 .ld-card-content {
   padding: 28px;
@@ -271,21 +271,3 @@
   .ld-grid-3 { grid-template-columns: 1fr; }
   .ld-grid-1 { max-width: 100%; }
 }
-
-/* EMAIL LINKS */
-.ld-email-link {
-  display: inline-block;
-  margin-top: 16px;
-  font-family: var(--font-head);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--navy);
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.ld-email-link:hover { opacity: 0.6; }
-.ld-pastor-email {
-  color: rgba(255,255,255,0.75);
-}
-.ld-pastor-email:hover { opacity: 1; color: var(--white); }

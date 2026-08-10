@@ -1,0 +1,263 @@
+/* =============================================
+   VAN MINISTRY — van-ministry.css
+   ============================================= */
+
+.site-header.scrolled {
+  background: var(--navy-deep);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* SHARED CONTAINER */
+.vm-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* INTRO */
+.vm-intro {
+  background: var(--white);
+  padding: 100px 0;
+}
+.vm-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: start;
+}
+.vm-quick-card {
+  background: var(--off-white);
+  border-top: 4px solid var(--navy);
+  border-radius: 0 0 4px 4px;
+  padding: 40px;
+}
+.vm-quick-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.vm-quick-card-icon {
+  color: var(--navy);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.vm-quick-label {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 4px;
+}
+.vm-quick-value {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.vm-quick-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 28px 0;
+}
+
+/* HOW IT WORKS */
+.vm-how {
+  background: var(--off-white);
+  padding: 100px 0;
+  border-top: 1px solid #e8e4e0;
+}
+.vm-how-header {
+  max-width: 680px;
+  margin-bottom: 64px;
+}
+.vm-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.vm-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 40px 48px;
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+  transition: border-left-color 0.2s, transform 0.2s;
+}
+.vm-step:hover {
+  border-left-color: var(--dust);
+  transform: translateX(4px);
+}
+.vm-step-num {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  opacity: 0.12;
+  line-height: 1;
+  padding-top: 4px;
+}
+.vm-step-heading {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.vm-step-text {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text-mid);
+}
+.vm-link {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--navy);
+  transition: opacity 0.2s;
+}
+.vm-link:hover { opacity: 0.6; }
+
+/* SCRIPTURE BANNER */
+.vm-banner {
+  background: var(--navy);
+  padding: 80px 0;
+}
+.vm-banner-inner {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto;
+}
+.vm-banner-verse {
+  font-family: var(--font-body);
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.vm-banner-ref {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+/* FAQ */
+.vm-faq {
+  background: var(--white);
+  padding: 100px 0;
+}
+.vm-faq-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.vm-faq-header {
+  position: sticky;
+  top: 100px;
+}
+.vm-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.vm-faq-item {
+  padding: 36px 0;
+  border-bottom: 1px solid #eee;
+}
+.vm-faq-item:first-child { padding-top: 0; }
+.vm-faq-q {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.vm-faq-a {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-mid);
+}
+
+/* CTA */
+.vm-cta {
+  background: var(--navy);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+.vm-cta-heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.vm-cta-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.7);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+.vm-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .vm-intro-grid { grid-template-columns: 1fr; gap: 48px; }
+  .vm-faq-inner { grid-template-columns: 1fr; gap: 48px; }
+  .vm-faq-header { position: static; }
+}
+@media (max-width: 680px) {
+  .vm-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .vm-step { grid-template-columns: 1fr; gap: 8px; padding: 32px 24px; }
+  .vm-step-num { font-size: 32px; }
+}
