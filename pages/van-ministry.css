@@ -1,0 +1,312 @@
+/* =============================================
+   VAN MINISTRY — van-ministry.css
+   Colors pulled from the van flyer:
+   Sky blue, navy, olive/forest green, gold, cream
+   ============================================= */
+
+:root {
+  --vm-blue:    #4ab3d8;
+  --vm-navy:    #1b2e4b;
+  --vm-green:   #4a6741;
+  --vm-green-dk:#354d2f;
+  --vm-gold:    #e8a820;
+  --vm-cream:   #f5f0e8;
+}
+
+/* Force dark nav always */
+.site-header,
+.site-header.scrolled {
+  background: var(--vm-navy);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+
+/* SHARED CONTAINER */
+.vm-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--vm-navy);
+  padding: 160px 40px 80px;
+  text-align: center;
+  border-bottom: 4px solid var(--vm-gold);
+}
+.hero-eyebrow-sm {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vm-gold);
+  margin-bottom: 16px;
+}
+.page-hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.page-hero-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* FLYER HERO IMAGE */
+.vm-flyer-hero {
+  background: var(--vm-blue);
+  line-height: 0;
+  overflow: hidden;
+}
+.vm-flyer-hero-img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* INVITE SECTION */
+.vm-invite {
+  background: var(--vm-cream);
+  padding: 80px 0;
+  border-bottom: 4px solid var(--vm-gold);
+}
+.vm-invite-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.vm-invite-heading {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--vm-gold);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.vm-invite-body {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--vm-navy);
+  margin-bottom: 32px;
+}
+.vm-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.vm-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.vm-feature-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--vm-gold);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+.vm-feature-label {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--vm-navy);
+}
+.vm-feature-desc {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--vm-green-dk);
+}
+
+/* QUICK CARD */
+.vm-quick-card {
+  background: var(--white);
+  border-top: 4px solid var(--vm-navy);
+  border-radius: 0 0 4px 4px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.vm-quick-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.vm-quick-card-icon { color: var(--vm-navy); flex-shrink: 0; padding-top: 2px; }
+.vm-quick-label {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vm-gold);
+  margin-bottom: 4px;
+}
+.vm-quick-value {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--vm-navy);
+  line-height: 1.2;
+}
+.vm-quick-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 24px 0;
+}
+
+/* HOW IT WORKS */
+.vm-how {
+  background: var(--vm-green);
+  padding: 100px 0;
+}
+.vm-how-header {
+  max-width: 680px;
+  margin-bottom: 64px;
+}
+.vm-how-header .section-eyebrow { color: var(--vm-gold); }
+.vm-how-header .section-heading { color: var(--white); }
+.vm-how-header .body-text { color: rgba(255,255,255,0.75); }
+.vm-steps { display: flex; flex-direction: column; gap: 2px; }
+.vm-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 40px 48px;
+  background: rgba(255,255,255,0.06);
+  border-left: 4px solid var(--vm-gold);
+  transition: background 0.2s, transform 0.2s;
+}
+.vm-step:hover { background: rgba(255,255,255,0.1); transform: translateX(4px); }
+.vm-step-num {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--vm-gold);
+  opacity: 0.4;
+  line-height: 1;
+  padding-top: 4px;
+}
+.vm-step-heading {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.vm-step-text {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 12px;
+}
+.vm-step-text:last-child { margin-bottom: 0; }
+.vm-link {
+  color: var(--vm-gold);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.vm-link:hover { opacity: 0.7; }
+
+/* SCRIPTURE BANNER */
+.vm-banner { background: var(--vm-navy); padding: 80px 0; }
+.vm-banner-inner { max-width: 720px; text-align: center; margin: 0 auto; }
+.vm-banner-verse {
+  font-family: var(--font-body);
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.vm-banner-ref {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vm-gold);
+}
+
+/* FAQ */
+.vm-faq { background: var(--vm-cream); padding: 100px 0; }
+.vm-faq-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.vm-faq-header { position: sticky; top: 100px; }
+.vm-faq-header .section-eyebrow { color: var(--vm-green); }
+.vm-faq-header .section-heading { color: var(--vm-navy); }
+.vm-faq-list { display: flex; flex-direction: column; gap: 2px; }
+.vm-faq-item { padding: 36px 0; border-bottom: 1px solid #d5cfc4; }
+.vm-faq-item:first-child { padding-top: 0; }
+.vm-faq-q {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--vm-navy);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.vm-faq-a {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--vm-green-dk);
+}
+
+/* CTA */
+.vm-cta { background: var(--vm-green-dk); padding: 100px 0; text-align: center; }
+.vm-cta-heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.vm-cta-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.7);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+.vm-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .vm-invite-grid { grid-template-columns: 1fr; gap: 48px; }
+  .vm-faq-inner { grid-template-columns: 1fr; gap: 48px; }
+  .vm-faq-header { position: static; }
+}
+@media (max-width: 680px) {
+  .vm-container { padding: 0 24px; }
+  .page-hero { padding: 140px 24px 64px; }
+  .vm-step { grid-template-columns: 1fr; gap: 8px; padding: 32px 24px; }
+  .vm-step-num { font-size: 32px; }
+  .vm-flyer-hero-img { max-height: 400px; }
+}
+
+/* Prevent horizontal scroll */
+.vm-flyer-hero, .vm-invite, .vm-how,
+.vm-banner, .vm-faq, .vm-cta { overflow-x: hidden; }
