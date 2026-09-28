@@ -1,5 +1,5 @@
 /* =============================================
-   SERMONS — sermons.css
+   SERMONS - sermons.css
    ============================================= */
 
 .site-header.scrolled {
@@ -76,180 +76,36 @@
   background: var(--white);
   padding: 100px 0;
 }
-.sr-latest-header { margin-bottom: 48px; }
-.sr-latest-grid {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 64px;
-  align-items: start;
+.sr-latest-inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.sr-embed-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
-}
-.sr-embed-wrap iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  border: none;
-}
-.sr-latest-label {
-  font-family: var(--font-head);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
-}
-.sr-latest-church {
-  font-family: var(--font-head);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--smoke);
-  margin-bottom: 20px;
-}
-.sr-latest-body {
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--text-mid);
-  margin-bottom: 32px;
-}
-.sr-yt-btn {
-  display: inline-flex;
-  align-items: center;
-}
-
-/* BROWSE SECTION */
-.sr-browse {
-  background: var(--off-white);
-  padding: 80px 0 100px;
-  border-top: 1px solid #e8e4e0;
-}
-
-/* TABS */
-.sr-browse-tabs {
-  display: flex;
-  gap: 4px;
+.sr-latest-header {
+  text-align: center;
   margin-bottom: 48px;
-  border-bottom: 2px solid #ddd;
 }
-.sr-tab {
-  background: none;
-  border: none;
-  font-family: var(--font-head);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--smoke);
-  padding: 12px 24px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-  transition: color 0.15s, border-color 0.15s;
+.sr-latest-header .body-text {
+  max-width: 620px;
+  margin: 16px auto 0;
 }
-.sr-tab:hover { color: var(--navy); }
-.sr-tab.active {
-  color: var(--navy);
-  border-bottom-color: var(--navy);
-}
-
-/* TAB PANELS */
-.sr-tab-panel { display: none; }
-.sr-tab-panel.active { display: block; }
-
-/* PLAYLIST EMBED */
-.sr-playlist-wrap {
+.sr-video-wrap {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  margin-bottom: 32px;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.18);
+  background: var(--navy-deep);
 }
-.sr-playlist-wrap iframe {
+.sr-video-wrap iframe {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   border: none;
 }
-.sr-yt-link {
+.sr-latest-actions {
   display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.sr-yt-text {
-  font-family: var(--font-body);
-  font-size: 17px;
-  color: var(--text-mid);
-  flex: 1;
-}
-
-/* SERIES NOTE */
-.sr-series-note {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 28px;
-  padding: 48px;
-  background: var(--white);
-  border-left: 4px solid var(--navy);
-  border-radius: 0 4px 4px 0;
-  max-width: 680px;
-}
-.sr-series-note-inner {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  color: var(--text-mid);
-}
-.sr-series-note-inner svg { flex-shrink: 0; color: var(--navy); margin-top: 2px; }
-.sr-series-note-inner p {
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.75;
-}
-
-/* COMING SOON */
-.sr-coming-soon {
-  background: var(--white);
-  padding: 100px 0;
-  border-bottom: 1px solid #eee;
-}
-.sr-cs-inner {
-  max-width: 680px;
-}
-.sr-cs-icon {
-  color: var(--navy);
-  margin-bottom: 28px;
-  opacity: 0.4;
-}
-.sr-cs-heading {
-  font-family: var(--font-head);
-  font-size: clamp(24px, 3.5vw, 36px);
-  font-weight: 800;
-  color: var(--navy);
-  line-height: 1.15;
-  margin-bottom: 32px;
-}
-.sr-cs-body {
-  font-family: var(--font-body);
-  font-size: 19px;
-  line-height: 1.8;
-  color: var(--text-mid);
-  margin-bottom: 20px;
-}
-.sr-cs-actions {
-  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
@@ -257,11 +113,10 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .sr-latest-grid { grid-template-columns: 1fr; }
-}
 @media (max-width: 640px) {
   .sr-container { padding: 0 24px; }
   .page-hero { padding: 140px 24px 64px; }
-  .sr-yt-link { flex-direction: column; align-items: flex-start; }
+  .sr-latest { padding: 72px 0; }
+  .sr-latest-actions { flex-direction: column; }
+  .sr-latest-actions .btn { width: 100%; text-align: center; }
 }
