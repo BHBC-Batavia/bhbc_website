@@ -525,6 +525,12 @@ a { text-decoration: none; color: inherit; }
   background-size: cover;
   background-position: center;
   opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+}
+.sermon-section .container {
+  position: relative;
+  z-index: 1;
 }
 .sermon-header {
   text-align: center;
