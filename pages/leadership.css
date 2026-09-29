@@ -1,5 +1,5 @@
 /* =============================================
-   LEADERSHIP — leadership.css
+   LEADERSHIP - leadership.css
    ============================================= */
 
 .site-header.scrolled {
@@ -234,6 +234,22 @@
 }
 .ld-pastor-card .ld-spouse-label { color: var(--silver); }
 .ld-pastor-card .ld-spouse-name { color: var(--white); }
+
+/* EMAIL / LINK IN CARDS */
+.ld-email-link {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  text-decoration: none;
+  margin-top: 14px;
+  transition: opacity 0.2s;
+  word-break: break-word;
+}
+.ld-email-link:hover { opacity: 0.6; }
+
 
 /* CTA */
 .ld-cta {
