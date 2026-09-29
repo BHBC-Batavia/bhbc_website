@@ -88,6 +88,63 @@
   max-width: 620px;
   margin: 16px auto 0;
 }
+/* GO-LIVE SCHEDULE */
+.sr-schedule {
+  background: var(--off-white);
+  border-radius: 6px;
+  padding: 40px;
+  margin-bottom: 48px;
+  border-top: 4px solid var(--navy);
+}
+.sr-schedule-label {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.sr-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.sr-schedule-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 20px;
+  background: var(--white);
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #e8e4e0;
+}
+.sr-schedule-service {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.sr-schedule-arrow {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--smoke);
+}
+.sr-schedule-time {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+/* VIDEO */
 .sr-video-wrap {
   position: relative;
   padding-bottom: 56.25%;
@@ -111,8 +168,55 @@
   flex-wrap: wrap;
   margin-top: 40px;
 }
+.sr-invite {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  text-align: center;
+  max-width: 560px;
+  margin: 32px auto 0;
+}
+.sr-directions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.sr-directions .btn { cursor: pointer; }
+.sr-maps-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1px solid #e0dbd5;
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 20;
+  min-width: 200px;
+}
+.sr-maps-menu[hidden] { display: none; }
+.sr-maps-option {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 14px 24px;
+  text-align: center;
+  transition: background 0.15s;
+}
+.sr-maps-option:hover { background: var(--off-white); }
+.sr-maps-option:not(:last-child) { border-bottom: 1px solid #eee; }
 
 /* RESPONSIVE */
+@media (max-width: 720px) {
+  .sr-schedule-grid { grid-template-columns: 1fr; }
+  .sr-schedule { padding: 28px; }
+}
 @media (max-width: 640px) {
   .sr-container { padding: 0 24px; }
   .page-hero { padding: 140px 24px 64px; }

@@ -68,7 +68,28 @@
         <div class="sr-latest-header">
           <p class="section-eyebrow">Watch and Listen</p>
           <h2 class="section-heading">Our Latest Sermons</h2>
-          <p class="body-text">Every message from Blessed Hope Baptist Church is uploaded to our YouTube channel. Watch the most recent sermon below, or browse the full&nbsp;archive.</p>
+          <p class="body-text">Every message preached in person at Blessed Hope Baptist Church goes live on our YouTube channel exactly 24 hours after the service. If you miss a service, or you want to hear a message again, you will find it here the following day.</p>
+        </div>
+
+        <div class="sr-schedule reveal">
+          <p class="sr-schedule-label">When Sermons Go Live</p>
+          <div class="sr-schedule-grid">
+            <div class="sr-schedule-item">
+              <span class="sr-schedule-service">Sunday Worship Service</span>
+              <span class="sr-schedule-arrow">Preached Sunday 10:30 AM</span>
+              <span class="sr-schedule-time">Live Monday 10:30 AM</span>
+            </div>
+            <div class="sr-schedule-item">
+              <span class="sr-schedule-service">Sunday Evening Service</span>
+              <span class="sr-schedule-arrow">Preached Sunday 5:30 PM</span>
+              <span class="sr-schedule-time">Live Monday 5:30 PM</span>
+            </div>
+            <div class="sr-schedule-item">
+              <span class="sr-schedule-service">Wednesday Bible Study</span>
+              <span class="sr-schedule-arrow">Preached Wednesday 7:00 PM</span>
+              <span class="sr-schedule-time">Live Thursday 7:00 PM</span>
+            </div>
+          </div>
         </div>
         <div class="sr-video-wrap">
           <iframe
@@ -78,6 +99,17 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
+        </div>
+        <p class="sr-invite">Like what you see online? Consider joining us in person at 3515 Galloway Rd in Batavia. There is always a seat for you.</p>
+        <div class="sr-directions">
+          <button type="button" class="btn btn-primary" id="sr-directions-btn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right:8px;vertical-align:middle"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </button>
+          <div class="sr-maps-menu" id="sr-maps-menu" hidden>
+            <a href="https://maps.apple.com/?address=3515+Galloway+Rd,+Batavia,+NY+14020" target="_blank" class="sr-maps-option">Apple Maps</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=3515+Galloway+Rd+Batavia+NY+14020" target="_blank" class="sr-maps-option">Google Maps</a>
+          </div>
         </div>
         <div class="sr-latest-actions">
           <a href="https://www.youtube.com/channel/UCxnEfekVqDbPl2jJrrx23qg/videos" target="_blank" class="btn btn-primary">
@@ -145,6 +177,25 @@
   </footer>
 
   <script src="../main.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById('sr-directions-btn');
+      var menu = document.getElementById('sr-maps-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function (e) {
+        if (!menu.hidden && !menu.contains(e.target) && e.target !== btn) {
+          menu.hidden = true;
+        }
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { menu.hidden = true; });
+      });
+    })();
+  </script>
 
 </body>
 </html>
